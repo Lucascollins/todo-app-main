@@ -5,6 +5,7 @@ window.addEventListener('load',()=>{
 
     const main = document.querySelector("main")
     const section = document.querySelector("section")
+    const nav = document.querySelector("nav")
     const mainText = document.getElementById('footer-text')
 
     const id = 0;
@@ -104,8 +105,6 @@ window.addEventListener('load',()=>{
         })
         loadFooter()
     }
-
-
     const loadFooter = ()=>{
         const div = document.querySelector('div')
         const x = window.matchMedia("(max-width: 500px)")
@@ -152,7 +151,6 @@ window.addEventListener('load',()=>{
                  tasks.pop();
              }
              addInput.value =""
-    
              loadTasks()  
          })
     
@@ -190,7 +188,7 @@ window.addEventListener('load',()=>{
              itemsLeft.textContent = `${tasks.filter(task=>task.status == "concluido").length} items left`
          })
 
-    
+     return footer
     }
 
     addForm.addEventListener('submit',(e)=>{
@@ -206,10 +204,16 @@ window.addEventListener('load',()=>{
     imgBtn.addEventListener('click',()=>{
         document.body.classList.toggle("lightmodebackground")
         addForm.classList.toggle("lightmode")
-        document.querySelector("footer").classList.toggle("lightmode")
         section.classList.toggle("lightmode")
         imgBtn.classList.toggle("sun") 
-        document.querySelector("nav").classList.toggle("lightmode")
+        if(body.classList == "lightmodebackground"){
+            document.querySelector("footer").classList.toggle("lightmode")
+            document.querySelector("nav").classList.toggle("lightmode")
+        }
+        else{
+            document.querySelector("footer").classList.toggle("darkmode")
+            document.querySelector("nav").classList.toggle("darkmode") 
+        }
     })
     
 
