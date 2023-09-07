@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root{
+
+/* ### Primary */
+
+--BrightBlue: hsl(220, 98%, 61%);
+--CheckBackground: hsl(192, 100%, 67%) , hsl(280, 87%, 65%);
+
+/* ### Neutral */
+
+/* ### Light Theme */
+
+--VeryLightGray: hsl(0, 0%, 98%);
+--VeryLightGrayishBlue: hsl(236, 33%, 92%);
+--LightGrayishBlue: hsl(233, 11%, 84%);
+--DarkGrayishBlue: hsl(236, 9%, 61%);
+--VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+/* ###Dark Theme */
+
+--VeryDarkBlue: hsl(235, 21%, 11%);
+--VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+--LightGrayishBlue: hsl(234, 39%, 85%);
+--LightGrayishBlueHover: hsl(236, 33%, 92%);
+--DarkGrayishBlue: hsl(234, 11%, 52%);
+--VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+--VeryDarkGrayishBluee: hsl(237, 14%, 26%);
+}
+
+
+html{
+    width: 100vw;
+    height: 100vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+}
+
+
+body{
+    align-items: center;
+    justify-content: center;
+    background-image: url("./images/bg-desktop-dark.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    background-color: var(--VeryDarkBlue);
+    width: 100%;
+    height: 100%;
+}
+
+
+body,main,section{
+    display: flex;
+    flex-direction: column;
+}
+
+form,header,li,footer,nav{
+    display: flex;
+    flex-direction:row;
+}
+
+main{
+    justify-content: center;
+    width: 30em;
+    height: auto;
+    gap: 2.2em;
+}
+
+header{
+    justify-content: space-between;
+    
+}
+
+
+.sun {
+    content: url(./images/icon-sun.svg);
+}
+
+header img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;    
+
+}
+
+img:hover{
+    opacity: 0.8;
+}
+
+header h1{
+    font-size: 40px;
+    letter-spacing: 4pt;
+    color: var(--VeryLightGray);
+}
+
+form{
+    width: 100%;
+    height: 4em;
+    align-items: center;
+    padding: 1.5em;
+    background-color: var(--VeryDarkDesaturatedBlue);
+    border-radius: 4px;
+    gap: 1em;
+}
+
+input[type="text"]{
+    width: 100%;
+    height: 2em;
+    border: none;
+    background-color: transparent;
+    border:none;
+}
+input[type="text"]:focus{
+    outline: none;
+
+}
+
+
+/* input[type="checkbox"]{
+    appearance: none;
+    background-color: transparent;
+    border: 1pt solid var(--VeryDarkGrayishBluee) ;
+    border-radius: 50%;
+    height: 30px;
+    width:30px;
+}
+
+input[type="checkbox"]:checked::before{
+    content: "✓";
+    appearance: none;
+    text-align: center;
+    background-color: transparent;
+    border: none ;
+    padding: 6px;
+    border-radius: 50%;
+    background: linear-gradient(110deg, var(--CheckBackground));
+    
+} */
+
+.checkbox-btn{
+    appearance: none;
+    background-color: transparent;
+    border: 1pt solid var(--VeryDarkGrayishBluee) ;
+    border-radius: 50%;
+    height: 30px;
+    width:30px;
+}
+
+.checkbox-btn:checked::before{
+    content: "✓";
+    appearance: none;
+    text-align: center;
+    background-color: transparent;
+    border: none ;
+    padding: 0.4em;
+    font-size: 1em;
+    border-radius: 50%;
+    background: linear-gradient(110deg, var(--CheckBackground));
+}
+
+.title{
+    text-decoration: line-through;
+}
+
+
+
+section{
+    width: auto;
+    height: auto;
+    background-color: var(--VeryDarkDesaturatedBlue);
+    border-radius: 4px;
+}
+
+
+li{
+    height: 4em;
+    padding: 1.5em;
+    align-items: center;
+    list-style: none;
+    gap: 1em;
+    border-bottom:1pt solid var(--VeryDarkGrayishBluee) ;
+    cursor: pointer;
+}
+
+
+
+span{
+    text-align: center;
+}
+
+.remove{
+    position: relative;
+    left: 80%;
+}
+
+
+
+footer{
+    justify-content: space-between;
+    padding: 1.5em;
+    border-radius: 4px;
+}
+
+
+.items-left,button,span,input[type="text"]{
+    font-size:17px;
+    color: var(--DarkGrayishBlue);
+    font-weight: 400;
+}
+
+.nav-mobile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    background-color: var(--VeryDarkDesaturatedBlue);
+    padding: 1.5em;
+    gap: 0.6em;
+    border-radius: 4px;
+}
+
+nav{
+    gap: 0.5em;
+}
+
+
+
+button{
+    background-color: transparent;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor:pointer ;
+   
+}
+
+button:hover{color: var(--BrightBlue);}
+
+.lightmodebackground{
+    background-color: var(--VeryLightGrayishBlue);
+    background-image: url("./images/bg-desktop-light.jpg");
+}
+.lightmode{
+    background-color: var(--VeryLightGray);
+}
+
+
+@media screen and (max-width:500px){
+    
+
+    body{
+        width: auto;
+        height: auto;
+
+    }
+    
+    main{
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        gap: 2.2em;
+        margin: 1em 1em;
+    }
+    footer{
+        justify-content: space-between;
+        padding: 1.5em;
+        border-radius: 4px;
+    }
+
+    button,span{
+        font-size: 10pt;
+    }
+}
